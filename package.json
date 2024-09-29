@@ -1,12 +1,16 @@
 {
   "name": "worker-sort",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A library for sorting arrays using Web Workers.",
   "main": "dist/main.js",
   "scripts": {
     "build": "babel src --out-dir dist",
     "watch": "babel src --out-dir dist --watch",
     "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apoorvdtu/workersort.git"
   },
   "keywords": [
     "npm",
