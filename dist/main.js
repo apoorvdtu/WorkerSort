@@ -16,6 +16,7 @@ function createChunks(array, chunkSize) {
 // Function to sort an array using Web Workers
 function sortArrayWithWorkers(array, comparator) {
   return new Promise(function (resolve, reject) {
+    var comparatorString = comparator.toString();
     var numWorkers = navigator.hardwareConcurrency || 4;
     var chunkSize = Math.ceil(array.length / numWorkers);
     var sortedChunks = [];
@@ -25,7 +26,7 @@ function sortArrayWithWorkers(array, comparator) {
       var worker = new Worker(new URL("./worker.js", import.meta.url));
       worker.postMessage({
         array: chunk,
-        comparator: comparator
+        comparator: comparatorString
       });
       worker.onmessage = function (e) {
         sortedChunks[index] = e.data;
