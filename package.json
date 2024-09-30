@@ -1,13 +1,13 @@
 {
   "name": "worker-sort",
-  "version": "1.0.3",
+  "version": "1.0.12",
   "description": "A JavaScript library for sorting large arrays using Web Workers without blocking the main UI thread.",
-  "main": "dist/main.js",
   "type": "module",
+  "main": "src/index.js",
   "scripts": {
-    "build": "babel src --out-dir dist",
-    "watch": "babel src --out-dir dist --watch",
-    "test": "jest"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -17,16 +17,20 @@
     "npm",
     "library",
     "web workers",
-    "sorting"
+    "sorting",
+    "parallel",
+    "performance",
+    "concurrency",
+    "sort",
+    "array",
+    "ui",
+    "thread",
+    "javascript",
+    "vite"
   ],
   "author": "Apoorv Ambavat",
   "license": "ISC",
-  "files": [
-    "dist/**/*"
-  ],
   "devDependencies": {
-    "@babel/core": "^7.17.0",
-    "@babel/cli": "^7.17.0",
-    "@babel/preset-env": "^7.17.0"
+    "vite": "^5.4.8"
   }
 }

@@ -8,7 +8,7 @@ function createChunks(array, chunkSize) {
 }
 
 // Function to sort an array using Web Workers
-export function sortArrayWithWorkers(array, comparator) {
+function sortArrayWithWorkers(array, comparator) {
   return new Promise((resolve, reject) => {
     const comparatorString = comparator.toString();
     const numWorkers = navigator.hardwareConcurrency || 4;
@@ -55,3 +55,5 @@ function mergeSortedChunks(sortedChunks, resolve, reject) {
     reject(new Error(`Merge Worker error: ${error.message}`));
   };
 }
+
+export default sortArrayWithWorkers;
